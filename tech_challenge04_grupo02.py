@@ -14,7 +14,7 @@ from statsmodels.tsa.arima.model import ARIMA
 st.title('Tech Challenger 4 - Grupo 02')
 st.write("***Integrantes:***")
 st.write("*Bárbara Pereira Godoi*")
-st.write("*Fernando correia do Nascimento*")
+st.write("*Fernando Correia do Nascimento*")
 st.write("*Guilherme Gentil Da Silva*")
 st.write("*João Vitor Lopes Arruda*")
 st.write("*William Fernandes Bento*")
