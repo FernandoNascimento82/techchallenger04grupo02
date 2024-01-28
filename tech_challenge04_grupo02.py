@@ -103,7 +103,7 @@ dt_hoje = date.today()
 dt_inicio = pd.to_datetime((dt_hoje + timedelta(-365)))
 df_b = df[(df.index >= dt_inicio)]
 
-st.write("***Tech Challenger***)
+st.write("***Tech Challenger***")
 grafico = plt.figure(figsize=(10, 6))
 plt.plot(df_b)
 plt.title("Evolução do preço do petróleo nos últimos 365 dias", fontdict=font_grafico, weight='bold', style='italic')
