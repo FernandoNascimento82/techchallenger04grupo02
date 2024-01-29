@@ -95,7 +95,20 @@ st.write("*Fonte:* https://g1.globo.com/economia/noticia/2020/03/09/o-que-explic
 st.write("")
 st.write("")
 
-
+df_crise = df[(df.index >= '2023-08-20') & (df.index <= '2023-09-30')]
+grafico = plt.figure(figsize=(10, 6))
+plt.plot(df_crise)
+font_grafico = {'family':'serif','color':'darkred','size':20}
+plt.title("Queda no estoque do combustível fóssil eleva preço do petróleo em 2023", fontdict=font_grafico, weight='bold', style='italic')
+plt.legend(bbox_to_anchor = (1.3, 1.3), ncol = 8)
+plt.xlabel("Periodo")
+plt.ylabel("Valor Total")
+plt.xticks(rotation=35)
+st.pyplot(grafico) 
+st.write("\"""... Os preços do petróleo bruto subiram quase de 3%, chegando a atingir US$ 97 por barril. Este é o valor mais alto desde agosto de 2022. A alta se deve à queda nos estoques do combustível fóssil no país. As informações são do Financial Times.\"""")
+st.write("\"""... Segundo dados divulgados pela Administração de Informação de Energia norte-americana, os estoques de petróleo bruto dos Estados Unidos caíram 2,2 milhões de barris em set/23 e em contrapartida o preço registrou a maior alta. Desde o inicio do ano, os preços do petróleo nos EUA subiram  cerca de 17%.\"""")
+st.write("*Fonte:* https://www.poder360.com.br/internacional/preco-do-petroleo-sobe-para-nivel-mais-alto-de-2023/")
+st.write("")
 st.write("---")
 st.write("")
 st.write("")
@@ -108,7 +121,7 @@ df_b = df[(df.index >= dt_inicio)]
 st.write("***Tech Challenger***")
 grafico = plt.figure(figsize=(10, 6))
 plt.plot(df_b)
-plt.title("Evolução do preço do petróleo nos últimos 365 dias", fontdict=font_grafico, weight='bold', style='italic')
+plt.title("Separando os dados dos últimos 365 dias para acompanhamento.", fontdict=font_grafico, weight='bold', style='italic')
 plt.legend(bbox_to_anchor = (1.3, 1.3), ncol = 8)
 plt.xlabel("Periodo")
 plt.ylabel("Valor Total")
