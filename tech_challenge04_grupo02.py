@@ -144,9 +144,9 @@ def ehEstacionaria(timeseries):
     dfoutput['Valor crítico (%s)'%key] = value
   
   if(dfoutput['Estatistica do teste'] < dfoutput['Valor crítico (5%)'] and dfoutput['p-value'] < 0.05):
-    st.write(f":black[**É estacionária.**]")
+    st.write(f"**É estacionária.**")
   else:
-    st.write(f":red[**Não é estacionária.**]")
+    st.write(f"**Não é estacionária.**")
     
 def test_stationary(timeseries):
 
