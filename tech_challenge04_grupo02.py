@@ -144,9 +144,9 @@ def ehEstacionaria(timeseries):
     dfoutput['Valor crítico (%s)'%key] = value
   
   if(dfoutput['Estatistica do teste'] < dfoutput['Valor crítico (5%)'] and dfoutput['p-value'] < 0.05):
-    st.write(f':black[**É estacionária.**]')
+    st.write(f":black[**É estacionária.**]")
   else:
-    st.write(f':red[**Não é estacionária.**]')
+    st.write(f":red[**Não é estacionária.**]")
     
 def test_stationary(timeseries):
 
@@ -230,3 +230,8 @@ plt.ylabel('Preço')
 plt.legend()
 plt.xticks(rotation=35)
 st.pyplot(grafico) 
+st.write("")
+st.write("---")
+st.write("***Conclusão:***")
+st.write("")
+st.write("A volatilidade no preço do petróleo desde o ano 2000 é inegavelmente influenciada por uma interconexão complexa de fatores. As tensões geopolíticas, como conflitos no Oriente Médio, têm o poder de disparar aumentos abruptos, enquanto crises econômicas impactam a demanda global por energia, provocando flutuações significativas nos valores do petróleo. Além disso, a crescente conscientização ambiental e a transição para fontes de energia alternativas também desempenham um papel crucial na dinâmica desse mercado. Essa interação entre eventos globais, politicas e mudanças na matriz energética destaca a natureza multifacetada e sensível do setor petrolífero, contribuindo para a complexidade das variações de preços ao longo das últimas décadas.")
