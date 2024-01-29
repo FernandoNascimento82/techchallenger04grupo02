@@ -96,18 +96,6 @@ st.write("")
 st.write("")
 
 
-df_crise = df[(df.index >= '2023-08-01') & (df.index <= '2023-09-31')]
-grafico = plt.figure(figsize=(10, 6))
-plt.plot(df_crise)
-font_grafico = {'family':'serif','color':'darkred','size':20}
-plt.title("Queda no estoque do combustível fóssil eleva preço do petróleo em 2023", fontdict=font_grafico, weight='bold', style='italic')
-plt.legend(bbox_to_anchor = (1.3, 1.3), ncol = 8)
-plt.xlabel("Periodo")
-plt.ylabel("Valor Total")
-plt.xticks(rotation=35)
-st.pyplot(grafico) 
-
-
 st.write("---")
 st.write("")
 st.write("")
