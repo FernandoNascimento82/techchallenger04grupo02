@@ -221,8 +221,9 @@ datas_futuras = pd.date_range(start=data_final, periods=61, inclusive='right')  
 
 previsoes_futuras = modelo_arima_otimizado_fit.forecast(steps=len(datas_futuras))
 
+#Mostrar no garfico de evolução, 90 dias de historico e 60 dias de previsão
 dt_hoje = date.today()
-dt_inicio = pd.to_datetime((dt_hoje + timedelta(-60)))
+dt_inicio = pd.to_datetime((dt_hoje + timedelta(-90)))
 
 df = df_b[(df_b['DATA'] >= dt_inicio)]
 grafico = plt.figure(figsize=(10, 6))
