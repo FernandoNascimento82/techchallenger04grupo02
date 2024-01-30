@@ -190,6 +190,10 @@ melhor_pdq = None
 warnings.filterwarnings("ignore")
 st.write("Combinações ARIMA(p d q):")
 
+#Professor, comentamos o código abaixo, pois ele irá buscar o melhor parametro
+#para o ARIMA, no Colab esse codigo rodou na média em 15 minutos, mas aqui no 
+#streamlit demorou bastante, então pegamos o melhor parametro gerado no Colab e forçamos 
+#o parametro aqui
 #for pdq in pdq_combinations:
 #    try:
 #        model = ARIMA(df_train['VALOR'].dropna(), order=pdq)
@@ -218,7 +222,7 @@ datas_futuras = pd.date_range(start=data_final, periods=61, inclusive='right')  
 previsoes_futuras = modelo_arima_otimizado_fit.forecast(steps=len(datas_futuras))
 
 dt_hoje = date.today()
-dt_inicio = pd.to_datetime((dt_hoje + timedelta(-30)))
+dt_inicio = pd.to_datetime((dt_hoje + timedelta(-60)))
 
 df = df_b[(df_b['DATA'] >= dt_inicio)]
 grafico = plt.figure(figsize=(10, 6))
